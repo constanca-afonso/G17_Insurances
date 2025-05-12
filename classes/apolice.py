@@ -27,6 +27,7 @@ class Apolice(Gclass):
         id_agente = int(id_agente)
         id_Tipo_Apolice = int(id_Tipo_Apolice)
         if id_agente in Agente.lst:
+            
             if id_Tipo_Apolice in Tipo_Apolice.lst:
                 id = Apolice.get_id(id)
                 self._id = id

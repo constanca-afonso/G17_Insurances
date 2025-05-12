@@ -35,19 +35,19 @@ db = 'sqlclassestabela.db'
 # test_class = Apolice
 # ob='0;1;1;1;1'
 
-#Uncomment to test class Apolice_Cliente
-from classes.tipo_apolice import Tipo_Apolice
-from classes.agente import Agente
-from classes.cliente import Cliente
-from classes.apolice import Apolice
-from classes.apolice_cliente import Apolice_Cliente
-Tipo_Apolice.read('data/sqlclassestabela.db')
-Agente.read('data/sqlclassestabela.db')
-Cliente.read('data/sqlclassestabela.db')
-Apolice.read('data/sqlclassestabela.db')
-Apolice_Cliente.read('data/sqlclassestabela.db')
-test_class = Apolice_Cliente
-ob='1;1;1;11/11/2022;ativo'
+# #Uncomment to test class Apolice_Cliente
+# from classes.tipo_apolice import Tipo_Apolice
+# from classes.agente import Agente
+# from classes.cliente import Cliente
+# from classes.apolice import Apolice
+# from classes.apolice_cliente import Apolice_Cliente
+# Tipo_Apolice.read('data/sqlclassestabela.db')
+# Agente.read('data/sqlclassestabela.db')
+# Cliente.read('data/sqlclassestabela.db')
+# Apolice.read('data/sqlclassestabela.db')
+# Apolice_Cliente.read('data/sqlclassestabela.db')
+# test_class = Apolice_Cliente
+# ob='1;1;1;11/11/2022;ativo'
 
 
 
