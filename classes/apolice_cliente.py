@@ -20,7 +20,7 @@ class Apolice_Cliente(Gclass):
     # Class header title
     header = 'Apolice_Cliente'
     # field description for use in, for example, input form
-    des = ['_id','_id_Apolice','_id_Cliente','_data_efetiva','_estado']
+    des = ['Id','Id Apolice','Id Cliente','Data Efetiva','Estado']
 
     # Constructor: Called when an object is instantiated
     def __init__(self, id, id_Apolice, id_Cliente, data_efetiva, estado):

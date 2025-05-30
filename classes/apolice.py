@@ -18,7 +18,7 @@ class Apolice(Gclass):
     # Class header title
     header = 'Apolice'
     # field description for use in, for example, input form
-    des = ['Id','Data Efetiva','Estado','Valor Cobertura', 'Prémio', 'Id Tipo Apólice', 'Id agente']
+    des = ['Id','Valor Cobertura', 'Prémio', 'Id Tipo Apólice', 'Id agente']
     # Constructor: Called when an object is instantiated
     def __init__(self, id, valor_cobertura, premio, id_Tipo_Apolice, id_agente):
         super().__init__()

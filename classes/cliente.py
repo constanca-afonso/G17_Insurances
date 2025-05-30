@@ -11,13 +11,13 @@ class Cliente(Gclass):
     pos = 0
     sortkey = ''
     # Attribute names list, identifier attribute must be the first one and callled 'id'
-    att = ['_id','_nome','_email','_nivel_risco']
+    att = ['_id','_nome','_email','_nivel_risco','_foto']
     # Class header title
     header = 'Cliente'
     # field description for use in, for example, input form
-    des = ['Id','Nome','Email','Nível Risco']
+    des = ['Id','Nome','Email','Nível Risco', 'Foto']
     # Constructor: Called when an object is instantiated
-    def __init__(self, id, nome, email, nivel_risco):
+    def __init__(self, id, nome, email, nivel_risco,foto):
         super().__init__()
         # Object attributes
         id = Cliente.get_id(id)
@@ -25,6 +25,7 @@ class Cliente(Gclass):
         self._nome = nome
         self._email = email
         self._nivel_risco = nivel_risco
+        self._foto=foto
         # Add the new object to the dictionary of objects
         Cliente.obj[id] = self
         # Add the id to the list of object ids
@@ -59,3 +60,10 @@ class Cliente(Gclass):
     @nivel_risco.setter
     def nivel_risco(self, nivel_risco):
         self._nivel_risco = nivel_risco
+    @property
+    def foto(self):
+        return self._foto
+    @foto.setter
+    def foto(self, foto):
+        self._foto = foto
+        

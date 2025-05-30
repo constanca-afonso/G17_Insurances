@@ -11,6 +11,10 @@ from classes.userlogin import Userlogin
 from subs.apps_gform import apps_gform 
 from subs.apps_subform import apps_subform 
 from subs.apps_userlogin import apps_userlogin
+from subs.apps_plot import apps_plot
+import subs.subs_customerFoto as customerfsub
+import os
+
 
 app = Flask(__name__)
 
@@ -21,6 +25,10 @@ Apolice.read(filename + 'sqlclassestabela.db')
 Apolice_Cliente.read(filename + 'sqlclassestabela.db')
 Userlogin.read(filename + 'sqlclassestabela.db')
 app.secret_key = 'BAD_SECRET_KEY'
+
+upload_folder = os.path.join('static', 'fotos')
+app.config['UPLOAD'] = upload_folder
+
 
 @app.route("/")
 def index():
@@ -51,5 +59,21 @@ def subform(cname):
 @app.route("/Userlogin", methods=["post","get"])
 def userlogin():
     return apps_userlogin()
+
+@app.route("/customer_foto", methods=["post","get"])
+def subfoto():
+    cname = "Cliente"
+    return customerfsub.customerFotoform(app,cname)
+
+@app.route("/plot",methods = ["post", "get"])
+def plot():
+    return apps_plot()
+
+
+
+
+
+
+
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
