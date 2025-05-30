@@ -1,88 +1,146 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+:root {
+    --bg-color: #f9f9fb;
+    --primary-color: #295e77;
+    --secondary-color: #8eaebd;
+    --accent-color: #cfe8ef;
+    --text-color: #2c3e50;
+    --card-bg: #ffffff;
+    --button-color: #295e77;
+    --button-hover: #8eaebd;
+    --border-color: #e0e0e0;
+}
+
+body {
     margin: 0;
-    min-height: 300px;
-    background-color: #faf3e9;
+    background-color: var(--bg-color);
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
 }
 
-nav{
-    width: 100%;
-    float: left;
-    background-color: #000000;
+/* NAVIGATION */
+nav {
+    background-color: var(--primary-color);
+    padding: 18px 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-.menu{
+.menu {
+    list-style: none;
+    padding: 0;
     margin: 0;
-    padding: 8px;
-    height: 100%;
-    background-color: #9abaaf;
-
 }
 
-.menu li{
-    display: inline;
+.menu li {
+    display: inline-block;
+    margin: 0 15px;
 }
 
-.button{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1em;
-    font-style: none;
-    color: #ffffff;
-    padding: 8px;
+.button {
+    background-color: var(--button-color);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
     text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
 }
 
-.button:link{
-    background-color: #1d5e47;
-    color: #888884;
+.button:hover {
+    background-color: var(--button-hover);
 }
 
-.button:hover{
-    background-color: #669887;
+/* CONTENT AREA */
+.dados {
+    text-align: center;
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.1em;
 }
 
-.dados{
-        text-align: center;
-        font-size: 1em;
-}
-
-.button1{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #9abaaf;
-    font-size: 1em;
-    font-style: none;
+/* BUTTONS */
+.button1 {
+    background-color: var(--secondary-color);
     color: white;
-    padding: 4px;
-    border-radius: 5px
+    border: none;
+    border-radius: 4px;
+    padding: 10px 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-
-.button1:link{
-    background-color: #3933a0;
-    color: #1d5e47;
+.button1:hover {
+    background-color: var(--button-hover);
 }
 
-.button1:hover{
-    background-color: lightblue;
+.button1:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
 }
 
-.button1:disabled{
-    background-color: lightgray;
-}
-
+/* TABLE STYLES */
 table {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 50%;
-  margin-left: auto; 
-  margin-right: auto;
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    border-collapse: collapse;
+    background-color: var(--card-bg);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
+thead {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+th, td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
 }
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+    background-color: #f4f6f8;
+}
+
+/* PLAN CARDS */
+.planos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 50px auto;
+    max-width: 1000px;
+    padding: 0 20px;
+}
+
+.plano {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.04);
+    text-align: center;
+}
+
+.plano h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.plano p {
+    margin: 8px 0;
+    color: #555;
+}
+
+.plano .button1 {
+    margin-top: 15px;
+    width: 100%;
 }
